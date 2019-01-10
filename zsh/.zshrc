@@ -1,6 +1,9 @@
 # Aliases
 alias abu='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
 
+# Add new ruby to path
+export PATH=/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin:$PATH
+
 # Powerlevel9k
 DEFAULT_USER=$USER
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true

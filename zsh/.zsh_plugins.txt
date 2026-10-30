@@ -1,7 +1,5 @@
-zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
-zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
 romkatv/powerlevel10k
-ohmyzsh/ohmyzsh path:plugins/history
-ohmyzsh/ohmyzsh path:lib/history.zsh
+zsh-users/zsh-syntax-highlighting

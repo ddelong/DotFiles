@@ -1,7 +1,7 @@
 # Enable Powerlevel10k instant prompt (keep near top)
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # Homebrew environment & completion paths (must be set BEFORE compinit)
 if [[ -f /opt/homebrew/bin/brew ]]; then
@@ -51,8 +51,17 @@ if type zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
+# -------------------------------------------------------------
+# Development Tools (Rust)
+# -------------------------------------------------------------
+
+# Add Rust to PATH if rustup is installed
+if type rustup &>/dev/null; then
+  export PATH="$(brew --prefix rustup)/bin:$PATH"
+fi
+
 # Theme configuration: Powerlevel10k (Active)
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Theme configuration: Starship (Uncomment below if you want to test Starship later)
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
